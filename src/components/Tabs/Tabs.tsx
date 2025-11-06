@@ -11,11 +11,15 @@ export const Tabs = ({ tabs }: { tabs: TabItem[] }) => {
   };
   return (
     <div>
-      <div role="tablist" onKeyDown={onKeyDown}>
+      <div role="tablist" onKeyDown={onKeyDown} className="tablist">
         {tabs.map(
-          (tab: { label: string; content: React.ReactNode }, index: number) => (
+          (
+            tab: { id: number; label: string; content: React.ReactNode },
+            index: number
+          ) => (
             <Tab
-              key={tab.label}
+              key={tab.id}
+              id={tab.id}
               label={tab.label}
               isActive={index === activeIndex}
               onClick={() => setActiveIndex(index)}

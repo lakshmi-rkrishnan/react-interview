@@ -66,3 +66,23 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.tab {
+  font-weight: normal;
+  outline: none;
+  border: none;
+}
+
+.tab:focus {
+  outline: none;
+  border: none;
+}
+
+.tab-active {
+  font-weight: bold;
+}
+
+.tablist {
+  display: flex;
+  gap: 16px;
+}

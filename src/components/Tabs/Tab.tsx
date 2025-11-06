@@ -1,16 +1,18 @@
 type TabProps = {
+  id: number;
   label: string;
   isActive: boolean;
   onClick: () => void;
 };
 
-const Tab = ({ label, isActive, onClick }: TabProps) => {
+const Tab = ({ id, label, isActive, onClick }: TabProps) => {
   return (
     <button
       role="tab"
       aria-selected={isActive}
       onClick={onClick}
-      style={{ fontWeight: isActive ? "bold" : "normal" }}
+      className={isActive ? "tab tab-active" : "tab"}
+      data-testid={`tab-${id}`}
     >
       {label}
     </button>

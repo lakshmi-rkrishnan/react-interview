@@ -4,9 +4,36 @@ import type { TabItem } from "./types/tab.types";
 
 function App() {
   const tabs: TabItem[] = [
-    { label: "Tab 1", content: <p>Tab 1</p> },
-    { label: "Tab 2", content: <p>Tab 2</p> },
-    { label: "Tab 3", content: <p>Tab 3</p> },
+    {
+      id: 1,
+      label: "Tab 1",
+      content: (
+        <p>
+          Welcome to Tab 1. Here you will find the detailed contents and
+          information related to Tab 1.
+        </p>
+      ),
+    },
+    {
+      id: 2,
+      label: "Tab 2",
+      content: (
+        <p>
+          Welcome to Tab 2. Here you will find the detailed contents and
+          information related to Tab 2.
+        </p>
+      ),
+    },
+    {
+      id: 3,
+      label: "Tab 3",
+      content: (
+        <p>
+          Welcome to Tab 3. Here you will find the detailed contents and
+          information related to Tab 3.
+        </p>
+      ),
+    },
   ];
 
   return (
